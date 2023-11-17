@@ -10,7 +10,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
     cors: {
-      origin: process.env.DEVELOPMENT_MODE ? "http://localhost:3001" : "https://typeracer-clone-vortes.vercel.app"
+      origin: process.env.DEVELOPMENT_MODE ? "https://typeracer-clone-vortes.vercel.app" : "http://localhost:3001"
     }
 });
 
