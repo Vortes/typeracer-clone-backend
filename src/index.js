@@ -9,7 +9,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
     cors: {
-      origin: "https://typeracer-clone-vortes.vercel.app/"
+      origin: "https://typeracer-clone-vortes.vercel.app"
     }
 });
 
