@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const port = process.env.PORT || 3000
+require('dotenv').config()
 
 const http = require('http');
 const server = http.createServer(app);
@@ -9,7 +10,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
     cors: {
-      origin: "https://typeracer-clone-vortes.vercel.app"
+      origin: process.env.DEVELOPMENT_MODE ? "http://localhost:3001" : "https://typeracer-clone-vortes.vercel.app"
     }
 });
 
